@@ -41,7 +41,55 @@ $(document).ready(function() {
 	// Functions
 	// ==========================================================================
 
-	
+	$.ajax({url: url, method: 'GET'})
+	.done(function(response) {
+
+		console.log(url);
+		console.log(response);
+		var results = response.response.docs;
+
+		for (var i = 0; i < results.length; i++) {
+			var mainHeadline = results[i].headline.main;
+			var mainHeadlineName = results[i].headline.name;
+			var intro = results[i].lead_paragraph;
+			var author = results[i].byline.original;
+			var date = results[i].pub_date;
+			var link = results[i].web_url;
+			
+			//console.log(mainHeadline +' - ' + mainHeadlineName);
+			
+			
+			var articleDiv = $('<div>');
+			
+			if (mainHeadlineName) {
+				var headline = mainHeadline +' - ' + mainHeadlineName;	
+			} else {
+				var headline = mainHeadline;
+			}
+			
+			articleDiv.html('<h3>'+headline+'</h3>');
+			if (author) {
+				articleDiv.append('<p>'+author+'</p>');	
+			}
+			
+			if (intro) {
+				articleDiv.append('<p>'+intro+'</p>');	
+			}
+			
+			
+			
+
+			
+
+			
+
+
+			$('.results').append(articleDiv);
+		}
+
+
+
+	});
 
 	
  	
