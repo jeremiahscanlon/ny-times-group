@@ -39,11 +39,10 @@
   					</div>
   				<div class="form-group">
   					<label for="pwd">Number of Recoreds to Retrieve</label>
-  					<select class="form-control">
-  					
- 						<option>1</option>
-  						<option>5</option>
-  						<option>10</option>
+  					<select class="form-control" id="records">
+ 						<option value="1">1</option>
+  						<option value="5">5</option>
+  						<option value="10">10</option>
 					</select>
 					</div>
 				<div class="form-group">
@@ -60,7 +59,7 @@
   					<button type="button" class="btn btn-defaul" aria-label="Left Align" id='search'>Search
   						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 					</button>
-					<button type="button" class="btn btn-default" aria-label="Right Align">Clear Result
+					<button type="button" class="btn btn-default" aria-label="Right Align" id="clear">Clear Result
 						<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
 					</button>
 					</form>
