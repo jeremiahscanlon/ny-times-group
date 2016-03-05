@@ -171,7 +171,7 @@ $(document).ready(function() {
 		var key = '876979a9db203dc5eec31096c3b8678b:0:74628681';
 
 		// create a variable to hold the api request url
-		var url = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q='+searchText+field+begin+end+'&api-key='+key;
+		var url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q='+searchText+field+begin+end+'&api-key='+key;
 
 		$.ajax({url: url, method: 'GET'})
 		.done(function(response) {
